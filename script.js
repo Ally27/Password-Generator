@@ -22,7 +22,7 @@ function writePassword() {
     passwordText.value = password;
 
 }
-function writePassword() {
+function generatePassword() {
     var password = prompt("How many characters would you like? (8-128)");
     if (password < 8) {
         alert("Input must be between 8-128!");
@@ -34,7 +34,7 @@ function writePassword() {
     }
 
     var numbers = confirm("Numbers?");
-    if (numbers === true) {
+    if (numbers) {
         password += "1";
 
 
@@ -51,7 +51,7 @@ function writePassword() {
     }
     var specialCharacters = confirm("Special characters?");
     if (specialCharacters) {
-        password += specialCharacters;
+        password += "!";
 
     }
 
@@ -61,7 +61,6 @@ function writePassword() {
 
     return password;
 }
-
 
 
 // Add event listener to generate button
