@@ -1,5 +1,10 @@
 // Assignment code here
-
+var specialCharacters = "!@#$%^&*()";
+var numbers = "0123456789";
+var lowerCase = "";
+var upperCase = "";
+var minimumCount = 8;
+var maximumCount = 128;
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -14,12 +19,34 @@ function writePassword() {
 }
 
 function generatePassword() {
-    var passwordLength = prompt("How many characters? (8-128)");
-    var number = confirm("Numbers?");
-    var lowercase = confirm("Any lower cases?");
-    var uppercase = confirm("What about UPPERCASE?")
-    var special = confirm("lastly, any special characters?")
-}
+    var passwordLength = prompt("How many characters would you like? (8-128)");
+    var newPassword = ""
+    if (passwordLength) {
+        var number = confirm("Numbers?");
+        if (number) {
+            newPassword += "1"
+
+
+        }
+        var lowercase = confirm("Any lower cases?");
+        if (lowerCase) {
+            newPassword += "a"
+
+        }
+        var uppercase = confirm("What about UPPERCASE?")
+        if (upperCase) {
+            newPassword += "A"
+
+        }
+        var special = confirm("lastly, any special characters?")
+        if (specialCharacters) {
+            newPassword += "!"
+
+        }
+    }
+    return newPassword
+};
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
